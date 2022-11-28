@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isShowingAlert = false
-    @State private var isShowingSheet = false
+    @State private var isShowingModal = false
     
     // MARK: -PROPERTIES
     
@@ -78,7 +78,7 @@ extension ContentView {
                 .padding(.vertical, 24)
             
             Button {
-                isShowingSheet.toggle()
+                isShowingModal.toggle()
             } label: {
                 Image(systemName: "cart.badge.plus")
                     .renderingMode(.original)
@@ -90,7 +90,7 @@ extension ContentView {
                             .foregroundColor(.black)
                             .opacity(0.4)
                     }
-            }.sheet(isPresented: $isShowingSheet) {
+            }.sheet(isPresented: $isShowingModal) {
                 HStack {
                     Text("Pink Beach, Flores")
                         .font(.system(size: 20, weight: .heavy, design: .rounded))
@@ -138,7 +138,8 @@ extension ContentView {
                         .font(.system(size: 20, weight: .heavy))
                         .foregroundColor(.blue)
                     Spacer()
-                    Link(destination: URL(string: "https://www.google.com/maps?cid=11470303954556706768")! ) {
+                    
+                    Link(destination: URL(string: "https://maps.app.goo.gl/uiALbb3zHY8YKRYM6")! ) {
                         
                         HStack(alignment: .center) {
                             Image(systemName: "bag")
@@ -173,7 +174,7 @@ extension ContentView {
                 .foregroundColor(.white)
                
             
-            Text("Discover lcoal destinations beauty with\nBluesky and travel with pride")
+            Text("Discover local destinations beauty with\nBlue sky and travel with pride.")
                 .font(.system(size: 20, weight: .medium, design: .rounded))
                 .foregroundColor(.white)
         }
