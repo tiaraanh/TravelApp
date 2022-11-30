@@ -18,7 +18,7 @@ This project is part of weekly assignment from iOS Development Bootcamp from iSw
 
 ## Installation
 
-- clone this repo git clone git@github.com:tiaraanh/TravelApp.git
+- clone this repo git clone `git@github.com:tiaraanh/TravelApp.git`
 - double click at file `TravelApp.xcodeproj`
 - run the app
 
