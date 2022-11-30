@@ -8,25 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: -PROPERTIES
     @State private var isShowingAlert = false
     @State private var isShowingModal = false
-    
-    // MARK: -PROPERTIES
     
     // MARK: -BODY
     var body: some View {
         ZStack {
-            
             Image("go-to-beach")
                 .resizable()
-                
                 .aspectRatio(contentMode: .fill)
                 .overlay {
                     Color .black
                         .opacity(0.4)
                 }
                 .ignoresSafeArea()
-            
             
             VStack(alignment: .leading) {
                 headerView
@@ -36,10 +32,6 @@ struct ContentView: View {
                     .padding(.bottom, 250)
                 Spacer()
             }
-   
-            
-          
-            
         }
     }
 }
@@ -52,7 +44,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-// MARK : - HeaderView
+// MARK: -HEADERVIEW
 extension ContentView {
     private var headerView: some View {
         HStack(alignment: .center, spacing: 100) {
@@ -165,7 +157,7 @@ extension ContentView {
     }
 }
 
-// MARK : - TitleView
+// MARK: - TITLEVIEW
 extension ContentView {
     private var titleView: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -173,7 +165,6 @@ extension ContentView {
                 .font(.system(size: 50, weight: .heavy, design: .rounded))
                 .foregroundColor(.white)
                
-            
             Text("Discover local destinations beauty with\nBlue sky and travel with pride.")
                 .font(.system(size: 20, weight: .medium, design: .rounded))
                 .foregroundColor(.white)
@@ -181,7 +172,7 @@ extension ContentView {
     }
 }
 
-// MARK: - DetailModal
+// MARK: -DETAILMODAL
 struct DetailModal: View {
     var title: String
     var symbol: String
